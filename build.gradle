@@ -1,0 +1,80 @@
+plugins {
+    id 'fabric-loom' version '1.9-SNAPSHOT'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
+// FLAT LAYOUT: all .java files lie next to this file (no src/ folders needed)
+sourceSets {
+    main {
+        java {
+            srcDirs = ['.']
+            include '*.java'
+        }
+        resources {
+            srcDirs = []
+        }
+    }
+}
+
+processResources {
+    inputs.property "version", project.version
+    from('fabric.mod.json') {
+        expand "version": project.version
+    }
+    from('en_us.json') {
+        into 'assets/primevisuals/lang'
+    }
+    from('sounds.json') {
+        into 'assets/primevisuals'
+    }
+    from('kill_tiktok.ogg') {
+        into 'assets/primevisuals/sounds'
+    }
+    from('bolt.ogg') {
+        into 'assets/primevisuals/sounds'
+    }
+    from('kill_coin.ogg') {
+        into 'assets/primevisuals/sounds'
+    }
+    from('kill_1up.ogg') {
+        into 'assets/primevisuals/sounds'
+    }
+    from('kill_stomp.ogg') {
+        into 'assets/primevisuals/sounds'
+    }
+    from('hit_tiktok.ogg') {
+        into 'assets/primevisuals/sounds'
+    }
+    from('hit_blip.ogg') {
+        into 'assets/primevisuals/sounds'
+    }
+    from('hit_bump.ogg') {
+        into 'assets/primevisuals/sounds'
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}

@@ -1,0 +1,66 @@
+{
+  "kill_tiktok": {
+    "sounds": [
+      {
+        "name": "primevisuals:kill_tiktok",
+        "stream": false
+      }
+    ]
+  },
+  "kill_coin": {
+    "sounds": [
+      {
+        "name": "primevisuals:kill_coin",
+        "stream": false
+      }
+    ]
+  },
+  "kill_1up": {
+    "sounds": [
+      {
+        "name": "primevisuals:kill_1up",
+        "stream": false
+      }
+    ]
+  },
+  "kill_stomp": {
+    "sounds": [
+      {
+        "name": "primevisuals:kill_stomp",
+        "stream": false
+      }
+    ]
+  },
+  "hit_tiktok": {
+    "sounds": [
+      {
+        "name": "primevisuals:hit_tiktok",
+        "stream": false
+      }
+    ]
+  },
+  "hit_blip": {
+    "sounds": [
+      {
+        "name": "primevisuals:hit_blip",
+        "stream": false
+      }
+    ]
+  },
+  "hit_bump": {
+    "sounds": [
+      {
+        "name": "primevisuals:hit_bump",
+        "stream": false
+      }
+    ]
+  },
+  "bolt": {
+    "sounds": [
+      {
+        "name": "primevisuals:bolt",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "primevisuals",
+  "version": "${version}",
+  "name": "Prime Visuals - Textures Manager",
+  "description": "Mix textures from many resource packs per item (totems, crystals, anchors, gapples, swords...) in one GUI. Open with Right Shift.",
+  "authors": ["you"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["primevisuals.PrimeVisualsClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
